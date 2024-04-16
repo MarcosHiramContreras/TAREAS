@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Producto</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+    <div class="w3-container w3-teal">
+        <h1>Formulario de Producto</h1>
+    </div>
+    <div class="w3-container">
+        <form id="productForm" class="w3-container">
+            <label for="productId">ID de Producto:</label>
+        <input type="text" id="productId" name="productId" class="w3-input" required><br><br>
+
+        <label for="productCategory">Categoría:</label>
+        <input type="text" id="productCategory" name="productCategory" class="w3-input" required><br><br>
+
+        <label for="productName">Nombre:</label>
+        <input type="text" id="productName" name="productName" class="w3-input" required><br><br>
+
+        <label for="productDescription">Descripción:</label><br>
+        <textarea id="productDescription" name="productDescription" class="w3-input" rows="4" cols="50" required></textarea><br><br>
+
+        <label for="productStock">Stock:</label>
+        <input type="number" id="productStock" name="productStock" class="w3-input" required><br><br>
+
+        <label for="productPrice">Precio:</label>
+        <input type="number" id="productPrice" name="productPrice" step="0.01" class="w3-input" required><br><br>
+
+        <label for="productCost">Costo:</label>
+        <input type="number" id="productCost" name="productCost" step="0.01" class="w3-input" required><br><br>
+
+        <input type="submit" class="w3-button w3-teal" value="Submit">
+    </form>
+    </div>
+
+    <script>
+        document.getElementById('productForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            
+            var productId = document.getElementById('productId').value;
+            var productCategory = document.getElementById('productCategory').value;
+            var productName = document.getElementById('productName').value;
+            var productDescription = document.getElementById('productDescription').value;
+            var productStock = document.getElementById('productStock').value;
+            var productPrice = document.getElementById('productPrice').value;
+            var productCost = document.getElementById('productCost').value;
+
+            
+            console.log("ID de Producto:", productId);
+            console.log("Categoría:", productCategory);
+            console.log("Nombre:", productName);
+            console.log("Descripción:", productDescription);
+            console.log("Stock:", productStock);
+            console.log("Precio:", productPrice);
+            console.log("Costo:", productCost);
+        });
+
+
+// TAREA DE MARCOS HIRAM CONTRERAS MENDOZA
+// MATRICULA 174155
+
+    </script>
+</body>
+</html>

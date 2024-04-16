@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Venta</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+    <div class="w3-container w3-teal">
+        <h1>Formulario de Venta</h1>
+    </div>
+    <div class="w3-container">
+        <form id="saleForm" class="w3-container">
+            <label for="productId">ID de Producto:</label>
+            <input type="text" id="productId" name="productId" class="w3-input" required><br>
+
+            <label for="productName">Nombre:</label>
+            <input type="text" id="productName" name="productName" class="w3-input" required><br>
+
+            <label for="productCategory">Categoría:</label>
+            <input type="text" id="productCategory" name="productCategory" class="w3-input" required><br>
+
+            <label for="productPrice">Precio:</label>
+            <input type="number" id="productPrice" name="productPrice" step="0.01" class="w3-input" required><br>
+
+            <label for="quantity">Cantidad:</label>
+            <input type="number" id="quantity" name="quantity" class="w3-input" required><br>
+
+            <label for="total">Total:</label>
+            <input type="number" id="total" name="total" step="0.01" class="w3-input" required readonly><br>
+
+            <button type="submit" class="w3-button w3-teal">Calcular Total</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('saleForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            
+            var productId = document.getElementById('productId').value;
+            var productName = document.getElementById('productName').value;
+            var productCategory = document.getElementById('productCategory').value;
+            var productPrice = parseFloat(document.getElementById('productPrice').value);
+            var quantity = parseFloat(document.getElementById('quantity').value);
+
+            
+            var total = productPrice * quantity;
+
+            
+            document.getElementById('total').value = total.toFixed(2);
+
+            
+            console.log("ID de Producto:", productId);
+            console.log("Nombre:", productName);
+            console.log("Categoría:", productCategory);
+            console.log("Precio:", productPrice);
+            console.log("Cantidad:", quantity);
+            console.log("Total:", total);
+        });
+
+        
+// TAREA DE MARCOS HIRAM CONTRERAS MENDOZA
+// MATRICULA 174155
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Distribuidor</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+    <div class="w3-container w3-teal">
+        <h1>Formulario de Distribuidor</h1>
+    </div>
+    <div class="w3-container">
+        <form id="distributorForm" class="w3-container">
+            <label for="distributorId">ID de Distribuidor:</label>
+        <input type="text" id="distributorId" name="distributorId" class="w3-input" required><br>
+
+        <label for="distributorName">Nombre:</label>
+        <input type="text" id="distributorName" name="distributorName" class="w3-input" required><br>
+
+        <label for="distributorPhone">Teléfono:</label>
+        <input type="tel" id="distributorPhone" name="distributorPhone" class="w3-input" required><br>
+
+        <label for="distributorAddress">Dirección:</label>
+        <textarea id="distributorAddress" name="distributorAddress" class="w3-input" rows="4" required></textarea><br>
+
+        <label for="distributorEmail">Email:</label>
+        <input type="email" id="distributorEmail" name="distributorEmail" class="w3-input" required><br>
+
+            <button type="submit" class="w3-button w3-teal">Calcular Total</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('distributorForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            var distributorId = document.getElementById('distributorId').value;
+            var distributorName = document.getElementById('distributorName').value;
+            var distributorPhone = document.getElementById('distributorPhone').value;
+            var distributorAddress = document.getElementById('distributorAddress').value;
+            var distributorEmail = document.getElementById('distributorEmail').value;
+
+            console.log("ID de Distribuidor:", distributorId);
+            console.log("Nombre:", distributorName);
+            console.log("Teléfono:", distributorPhone);
+            console.log("Dirección:", distributorAddress);
+            console.log("Email:", distributorEmail);
+        });
+
+// TAREA DE MARCOS HIRAM CONTRERAS MENDOZA
+// MATRICULA 174155
+
+    </script>
+</body>
+</html>
