@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Ventas</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+
+<div class="w3-container">
+    <h2>Formulario de Ventas</h2>
+    <form action="http://localhost/sqlite-panini/php/insertar-venta.php" method="post" class="w3-container">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" class="w3-input">
+        <label for="categoria">Categoría:</label>
+        <input type="text" id="categoria" name="categoria" class="w3-input">
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" name="precio" class="w3-input">
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" name="cantidad" class="w3-input">
+        <label for="total">Total:</label>
+        <input type="number" id="total" name="total" class="w3-input">
+        <br>
+        <button type="submit" class="w3-button w3-teal">Registrar Venta</button>
+    </form>
+</div>
+
+</body>
+</html>
